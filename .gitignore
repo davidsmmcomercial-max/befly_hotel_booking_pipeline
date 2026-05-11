@@ -216,3 +216,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Data lake layers
+data/bronze/
+data/silver/
+data/gold/
+
+# Parquet files
+*.parquet
+
+# Spark temp files
+.metastore/
+spark-warehouse/
