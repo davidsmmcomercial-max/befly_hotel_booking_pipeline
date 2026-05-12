@@ -1,0 +1,8 @@
+services:
+  befly-pipeline:
+    build: .
+    container_name: befly-pipeline
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: bash
