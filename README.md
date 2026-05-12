@@ -260,7 +260,7 @@ data/raw/hotel_metadata.csv
 
 ### 5. Executar o pipeline
 
-Execute os scripts na ordem:
+Execute os scripts na ordem(referenciando spark ou py):
 
 ```bash
 python scripts/raw_to_bronze.py
