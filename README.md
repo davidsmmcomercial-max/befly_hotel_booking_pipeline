@@ -260,29 +260,21 @@ data/raw/hotel_metadata.csv
 
 ### 5. Executar o pipeline
 
-Execute os scripts na ordem(referenciando spark ou py):
+Execute os scripts utilizando Python:
 
 ```bash
 python scripts/raw_to_bronze.py
-```
-
-```bash
 python scripts/bronze_to_silver.py
-```
-
-```bash
 python scripts/silver_to_gold.py
 ```
+
+Ou utilizando Spark Submit:
+
 ```bash
 spark-submit scripts/raw_to_bronze.py
-```
-```bash
 spark-submit scripts/bronze_to_silver.py
-```
-```bash
 spark-submit scripts/silver_to_gold.py
 ```
-
 ### 6. Validar as saídas
 
 Após a execução, as camadas serão geradas em:
