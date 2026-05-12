@@ -17,6 +17,13 @@ O projeto simula um pipeline local de Data Lake para responder perguntas de neg�
 
 ---
 
+## Versões utilizadas
+
+- Python 3.11
+- PySpark 4.0.1
+
+---
+
 ## Estrutura do Projeto
 
 ```text
@@ -96,6 +103,8 @@ arrival_date_year
 ### Silver
 
 A camada Silver aplica limpeza, padronização e enriquecimento dos dados.
+
+Foi utilizado `try_cast` para evitar falhas de parsing em valores inconsistentes presentes no dataset original (ex.: `children = 'NA'`), garantindo maior robustez no pipeline.
 
 Principais transformações:
 
@@ -429,6 +438,17 @@ Serviços sugeridos:
 - **Amazon CloudWatch** para logs, métricas e observabilidade
 
 Em produção, as tabelas Silver e Gold poderiam ser particionadas por ano e mês, reduzindo custo de leitura e melhorando performance em consultas temporais.
+
+---
+
+## Possíveis Evoluções
+
+- Implementação de testes de qualidade com Great Expectations ou Deequ
+- Uso de Apache Iceberg para versionamento e ACID
+- Orquestração com Airflow ou Step Functions
+- Deploy em AWS Glue/EMR
+- Monitoramento com CloudWatch e métricas de pipeline
+- Uso de Delta Lake ou Iceberg para operações incrementais
 
 ---
 
