@@ -273,8 +273,15 @@ python scripts/bronze_to_silver.py
 ```bash
 python scripts/silver_to_gold.py
 ```
-
----
+```bash
+spark-submit scripts/raw_to_bronze.py
+```
+```bash
+spark-submit scripts/bronze_to_silver.py
+```
+```bash
+spark-submit scripts/silver_to_gold.py
+```
 
 ### 6. Validar as saídas
 
